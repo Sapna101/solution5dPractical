@@ -1,0 +1,62 @@
+<form ngNativeValidate #signupForm>
+<div class="ms-Grid pageview">
+  <div class="ms-Grid-row ">
+    <img src="../../assets/5Dlogo.PNG">
+  </div>
+  <div class="ms-Grid-row dataview">
+    <div class="ms-Grid-row">
+      Sign Up
+    </div>
+    <div class="ms-Grid-row ">
+      To be a member
+    </div>
+    <div class="ms-Grid-row userdataview">
+      <div class="ms-Grid-col ms-u-lg6 ">
+        Firstname
+        <div>
+          <input type="text" name="firstname" [(ngModel)]="userdata.firstname" required>
+        </div>
+      </div>
+      <div class="ms-Grid-col ms-u-lg6 ">
+        Lastname
+        <div>
+          <input type="text" name="lastname" [(ngModel)]="userdata.lastname" required>
+        </div>
+      </div>
+      <div class="ms-Grid-col ms-u-lg6 ">
+        Mobile No.
+        <div>
+          <input type="number" name="mobilenumber" [(ngModel)]="userdata.mobilenumber" required>
+        </div>
+      </div>
+      <div class="ms-Grid-col ms-u-lg6 ">
+        Email-Id
+        <div>
+          <input type="email" name="emailId" [(ngModel)]="userdata.emailId" required>
+        </div>
+      </div>
+      <div class="ms-Grid-col ms-u-lg6 ">
+        City
+        <div>
+          <input type="text" name="city" [(ngModel)]="userdata.city" required>
+        </div>
+      </div>
+      <div class="ms-Grid-col ms-u-lg6 ">
+        Enter Password
+        <div>
+          <input type="password" name="password" [(ngModel)]="userdata.password" required>
+        </div>
+      </div>
+    </div>
+    <div class="ms-Grid-col ms-u-lg12">
+      <div>
+        <button type="submit" class="btn btn-default buttonview" (click)=" signupForm.checkValidity() ? registerUser() : null">Submit</button>
+      </div>
+    </div>
+    <div class="ms-Grid-col ms-u-lg12 errormsg" *ngIf="errmsg">Duplicate emailId</div>
+    <div class="ms-Grid-row " >   
+      Already a member ? <span [routerLink]="['/signin']">Sign In</span>
+    </div>
+  </div>
+</div>
+</form>

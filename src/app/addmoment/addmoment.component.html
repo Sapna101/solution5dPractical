@@ -1,0 +1,28 @@
+<form>
+  <div class="ms-Grid">
+    <div class="ms-Grid-row">
+      <div class="ms-Grid-col ms-u-lg2 divview slideview" [ngClass]="{'hideslider' : slidebarflag} ">
+        <app-slider-bar></app-slider-bar>
+      </div>
+      <div class="ms-Grid-col ms-u-lg10 divview">
+        <div class="tagsize borderview"><fa-icon [icon]="faSlidersH" (click)="sliderviewchange()"></fa-icon></div>
+        <div class="tagsize borderview">Add New Moment</div>
+        <div class="listview">
+          title
+          <div><input type='text' [(ngModel)]="title" [ngModelOptions]="{standalone: true}"></div>
+        </div>
+        <div class="listview">
+          tags
+          <div><input type='text' [(ngModel)]="tags" [ngModelOptions]="{standalone: true}"></div>
+        </div>
+        <div class="listview">
+          Image :
+          <div><input type='file' accept="image/*" (change)="onSelectFile($event)"></div>
+        </div>
+        <div class="listview">
+          <button type="submit" (click)="uploadmoment()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

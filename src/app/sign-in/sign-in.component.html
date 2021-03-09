@@ -1,0 +1,39 @@
+<form ngNativeValidate #signinForm>
+<div class="ms-Grid pageview">
+  <div class="ms-Grid-row ">
+    <img src="../../assets/5Dlogo.PNG">
+  </div>
+  <div class="ms-Grid-row dataview">
+    <div class="ms-Grid-row">
+      Sign In
+    </div>
+    <div class="ms-Grid-row ">
+      To start using the app
+    </div>
+    <div class="ms-Grid-row userdataview">
+        <div class="ms-Grid-col ms-u-lg5" ></div>
+        <div class="ms-Grid-col ms-u-lg7 aligndiv">
+          Enter email id
+          <div>
+            <input type="email" name="emailId" [(ngModel)]="userdata.emailId" required>
+          </div>
+        </div>
+        <div class="ms-Grid-col ms-u-lg5" ></div>
+        <div class="ms-Grid-col ms-u-lg7 aligndiv">
+          Enter Password
+          <div>
+            <input type="password" name="password" [(ngModel)]="userdata.password" required>
+          </div>
+        </div>
+    </div>
+    <div class="ms-Grid-col ms-u-lg12">
+      <div>
+        <button type="submit" class="btn btn-default buttonview" (click)=" signinForm.checkValidity() ? loginUser() : null">Submit</button>
+      </div>
+    </div>
+    <div class="ms-Grid-row " >
+      Not a member ? <span [routerLink]="['/signup']">Sign Up</span>
+    </div>
+  </div>
+</div>
+</form>

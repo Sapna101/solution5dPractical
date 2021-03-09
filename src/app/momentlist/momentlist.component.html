@@ -1,0 +1,27 @@
+<div class="ms-Grid">
+  <div class="ms-Grid-row">
+     <div class="ms-Grid-col ms-u-lg2 divview" [ngClass]="{'hideslider' : slidebarflag} ">
+       <app-slider-bar></app-slider-bar>
+    </div>
+    <div class="ms-Grid-col ms-u-lg10 divview" [ngClass]="{  'ms-u-lg12' : slidebarflag , 'ms-u-lg10' : !slidebarflag } ">
+      <div class="tagsize borderview"><fa-icon [icon]="faSlidersH" (click)="sliderviewchange()"></fa-icon></div>
+      <div class="tagsize borderview">Moment</div>
+      <div>
+      <table>
+        <th>Sr no.</th>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Tags</th>
+        <th>Actions</th>
+        <tr *ngFor="let moment of momentlist,let i=index;">
+          <td>{{i+1}}</td>
+          <td><img class="imgview" src="{{moment.imageurl}}" ></td>
+          <td>{{moment.title}}</td>
+          <td>{{moment.tags}}</td>
+          <td><fa-icon [icon]="faEdit"></fa-icon><fa-icon [icon]="faTrash"></fa-icon></td>
+        </tr>
+      </table>
+      </div>
+    </div>
+  </div>
+</div>

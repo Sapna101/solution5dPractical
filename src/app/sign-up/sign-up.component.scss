@@ -1,0 +1,46 @@
+.pageview{
+  text-align: center;
+  background-color: #001b30;
+  padding-top: 5px;
+}
+
+.dataview{
+  background-color: white;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.signupview{
+  font-size: 10px;
+  font-weight: bold;
+  color: #001b30;
+}
+
+.userdataview{
+  margin-top: calc(10vh);
+  padding: 5px;
+  text-align: left;
+  width: calc(80vw);
+  margin-left: calc(10vw);
+}
+
+input{
+  border: 0px;
+  border-bottom: 2px solid black;
+  margin-bottom: 5px;
+}
+
+.buttonview{
+    background: #001b30;
+    color: white;
+    border-radius: 11px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.errormsg{
+  font-size: 10px;
+  color: red;
+  margin-top: 10px;
+}
